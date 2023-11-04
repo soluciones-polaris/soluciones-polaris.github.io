@@ -1,8 +1,4 @@
-.fnd-verde-gradiente
+.fnd-verde
 {
-  background: rgb(22,28,21);
-  background: -moz-linear-gradient(180deg, rgba(22,28,21,1) 0%, rgba(40,167,69,1) 100%);
-  background: -webkit-linear-gradient(180deg, rgba(22,28,21,1) 0%, rgba(40,167,69,1) 100%);
-  background: linear-gradient(180deg, rgba(22,28,21,1) 0%, rgba(40,167,69,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#161c15",endColorstr="#28a745",GradientType=1); 
+  background-color: #28a745;
 }
