@@ -7,3 +7,8 @@
   /*font-family: Sofia, serif;*/
   font-weight: bold;
 }
+.ancho100
+{
+  width: 100%;
+  max-width: 100%;
+}
