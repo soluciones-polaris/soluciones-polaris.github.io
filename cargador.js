@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded",()=>{
   cargarBanner()
   cargarMenu()
+  cargarMenuH()
 
 })
 
@@ -10,6 +11,14 @@ function cargarBanner()
   .then(x => x.text())
   .then(y => document.getElementById("banner").innerHTML = y);
 }
+
+function cargarMenuH()
+{
+  fetch ("menu-h.html")
+  .then(x => x.text())
+  .then(y => document.getElementById("menu-lista").innerHTML = y);
+}
+
 
 function cargarMenu()
 {
@@ -25,4 +34,14 @@ function updatemenu() {
   }else{
     document.getElementById('menu').style.borderRadius = '3px';
   }
+}
+
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
 }
