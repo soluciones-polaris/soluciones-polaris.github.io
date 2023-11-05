@@ -4,5 +4,6 @@
 }
 .sofia-text
 {
-  font-family: Sofia, serif;
+  /*font-family: Sofia, serif;*/
+  font-weight: bold;
 }
