@@ -21,7 +21,7 @@ function pintarMenu()
     btnMenu[5].style.backgroundColor="#ccc"
   else 
   btnMenu[0].style.backgroundColor="#ccc"
-
+  console.log('se ha ejecutado pintar menu')
 }
 function cargarBanner()
 {
