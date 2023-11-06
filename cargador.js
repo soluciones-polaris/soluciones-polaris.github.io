@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   cargarBanner()
   cargarMenu()
   cargarMenuH()
-  pintarMenu()
+  
 
 })
 function pintarMenu()
@@ -10,17 +10,17 @@ function pintarMenu()
   let btnMenu=document.querySelectorAll("#menu > div > a")
   
   if(location.href.search(/.*todoelectro.*/ig) != -1)
-  document.querySelectorAll("#menu > div > a")[1].style.backgroundColor="#ccc"
+  btnMenu[1].style.backgroundColor="#ccc"
   else if(location.href.search(/.*mantenimiento.*/ig) != -1)
-  document.querySelectorAll("#menu > div > a")[2].style.backgroundColor="#ccc"
+  btnMenu[2].style.backgroundColor="#ccc"
   else if(location.href.search(/.*pcb.*/ig) != -1)
-    document.querySelectorAll("#menu > div > a")[3].style.backgroundColor="#ccc"
+    btnMenu[3].style.backgroundColor="#ccc"
   else if(location.href.search(/.*contacto.*/ig) != -1)
-    document.querySelectorAll("#menu > div > a")[4].style.backgroundColor="#ccc"
+    btnMenu[4].style.backgroundColor="#ccc"
   else if(location.href.search(/.*portafolio.*/ig) != -1)
-    document.querySelectorAll("#menu > div > a")[5].style.backgroundColor="#ccc"
+    btnMenu[5].style.backgroundColor="#ccc"
   else 
-  document.querySelectorAll("#menu > div > a")[0].style.backgroundColor="#ccc"
+  btnMenu[0].style.backgroundColor="#ccc"
 
 }
 function cargarBanner()
