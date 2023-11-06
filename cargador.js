@@ -2,9 +2,22 @@ document.addEventListener("DOMContentLoaded",()=>{
   cargarBanner()
   cargarMenu()
   cargarMenuH()
-  
+  cargarContenido()
+  cargarFooter()
 
 })
+function cargarFooter()
+{
+  fetch ("footer.html")
+  .then(x => x.text())
+  .then(y => document.getElementById("myfooter").innerHTML = y);
+}
+function cargarContenido()
+{
+  fetch ("programacion.html")
+  .then(x => x.text())
+  .then(y => document.getElementById("contenido").innerHTML = y);
+}
 function pintarMenu()
 {
   let btnMenu=document.querySelectorAll("#menu > div > a")
