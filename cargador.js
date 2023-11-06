@@ -12,9 +12,9 @@ function cargarFooter()
   .then(x => x.text())
   .then(y => document.getElementById("myfooter").innerHTML = y);
 }
-function cargarContenido()
+function cargarContenido(archivo="programacion.html")
 {
-  fetch ("programacion.html")
+  fetch (archivo)
   .then(x => x.text())
   .then(y => document.getElementById("contenido").innerHTML = y);
 }
