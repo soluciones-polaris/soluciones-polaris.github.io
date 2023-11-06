@@ -47,7 +47,42 @@ function cargarMenuH()
 {
   fetch ("menu-h.html")
   .then(x => x.text())
-  .then(y => document.getElementById("menu-lista").innerHTML = y);
+  .then(y => {
+    let contenedor=document.getElementById("menu-lista")
+    contenedor.innerHTML = y
+    let direcciones=contenedor.querySelectorAll("div > a")
+        direcciones[1].addEventListener("click", (evento)=>
+        {
+          cargarContenido("todoelectro.html")
+          console.log(evento)
+        })
+        direcciones[2].addEventListener("click", (evento)=>
+        {
+          cargarContenido("mantenimiento.html")
+          console.log(evento)
+        })
+        direcciones[3].addEventListener("click", (evento)=>
+        {
+          cargarContenido("pcb.html")
+          console.log(evento)
+        })
+        direcciones[4].addEventListener("click", (evento)=>
+        {
+          cargarContenido("contacto.html")
+          console.log(evento)
+        })
+        direcciones[5].addEventListener("click", (evento)=>
+        {
+          cargarContenido("portafolio.html")
+          console.log(evento)
+        })
+        direcciones[0].addEventListener("click", (evento)=>
+        {
+          cargarContenido("programacion.html")
+          console.log(evento)
+        })
+
+    });
 }
 
 
