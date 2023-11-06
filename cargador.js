@@ -42,7 +42,9 @@ function cargarMenu()
 {
   fetch ("menu.html")
   .then(x => x.text())
-  .then(y => document.getElementById("menu").innerHTML = y);
+  .then(y => {document.getElementById("menu").innerHTML = y
+    pintarMenu()
+    });
 }
 
 // function updatemenu() {
