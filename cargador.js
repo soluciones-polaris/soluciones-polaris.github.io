@@ -18,22 +18,12 @@ function cargarContenido(archivo="programacion.html")
   .then(x => x.text())
   .then(y => document.getElementById("contenido").innerHTML = y);
 }
-function pintarMenu()
+function pintarMenu(indice)
 {
   let btnMenu=document.querySelectorAll("#menu > div > a")
   
-  if(btnMenu[1].textContent.search(/.*electrónica.*/ig) != -1)
-  btnMenu[1].style.backgroundColor="#ccc"
-  else if(btnMenu[2].textContent.search(/.*mantenimiento.*/ig) != -1)
-  btnMenu[2].style.backgroundColor="#ccc"
-  else if(btnMenu[3].textContent.search(/.*circuitos\s*impresos.*/ig) != -1)
-    btnMenu[3].style.backgroundColor="#ccc"
-  else if(btnMenu[4].textContent.search(/.*Contactar.*/ig) != -1)
-    btnMenu[4].style.backgroundColor="#ccc"
-  else if(btnMenu[5].textContent.search(/.*Portafolio.*/ig) != -1)
-    btnMenu[5].style.backgroundColor="#ccc"
-  else 
-  btnMenu[0].style.backgroundColor="#ccc"
+  btnMenu[indice].style.backgroundColor="#ccc"
+  
   // console.log('se ha ejecutado pintar menu')
 }
 function cargarBanner()
@@ -54,32 +44,32 @@ function cargarMenuH()
         direcciones[1].addEventListener("click", (evento)=>
         {
           cargarContenido("todoelectro.html")
-          console.log(evento)
+          //console.log(evento)
         })
         direcciones[2].addEventListener("click", (evento)=>
         {
           cargarContenido("mantenimiento.html")
-          console.log(evento)
+          //console.log(evento)
         })
         direcciones[3].addEventListener("click", (evento)=>
         {
           cargarContenido("pcb.html")
-          console.log(evento)
+          //console.log(evento)
         })
         direcciones[4].addEventListener("click", (evento)=>
         {
           cargarContenido("contacto.html")
-          console.log(evento)
+          //console.log(evento)
         })
         direcciones[5].addEventListener("click", (evento)=>
         {
           cargarContenido("portafolio.html")
-          console.log(evento)
+          //console.log(evento)
         })
         direcciones[0].addEventListener("click", (evento)=>
         {
           cargarContenido("programacion.html")
-          console.log(evento)
+          //console.log(evento)
         })
 
     });
@@ -93,37 +83,43 @@ function cargarMenu()
   .then(y => {
     let contenedor=document.getElementById("menu")
     contenedor.innerHTML = y
-    pintarMenu()
+    // pintarMenu()
     let direcciones=contenedor.querySelectorAll("div > a")
         direcciones[1].addEventListener("click", (evento)=>
         {
           cargarContenido("todoelectro.html")
-          console.log(evento)
+          pintarMenu(1)
+          //console.log(evento)
         })
         direcciones[2].addEventListener("click", (evento)=>
         {
           cargarContenido("mantenimiento.html")
-          console.log(evento)
+          pintarMenu(2)
+          //console.log(evento)
         })
         direcciones[3].addEventListener("click", (evento)=>
         {
           cargarContenido("pcb.html")
-          console.log(evento)
+          pintarMenu(3)
+          //console.log(evento)
         })
         direcciones[4].addEventListener("click", (evento)=>
         {
           cargarContenido("contacto.html")
-          console.log(evento)
+          pintarMenu(4)
+          //console.log(evento)
         })
         direcciones[5].addEventListener("click", (evento)=>
         {
           cargarContenido("portafolio.html")
-          console.log(evento)
+          pintarMenu(5)
+          //console.log(evento)
         })
         direcciones[0].addEventListener("click", (evento)=>
         {
           cargarContenido("programacion.html")
-          console.log(evento)
+          pintarMenu(0)
+          //console.log(evento)
         })
 
 
