@@ -23,6 +23,10 @@ function pintarMenu(indice)
   let btnMenu=document.querySelectorAll("#menu > div > a")
   
   btnMenu[indice].style.backgroundColor="#ccc"
+  for (let i = 0; i < btnMenu.length; i++) {
+    if(i==indice) continue;
+    btnMenu[i].classList += " bg-dark"
+  }
   
   // console.log('se ha ejecutado pintar menu')
 }
