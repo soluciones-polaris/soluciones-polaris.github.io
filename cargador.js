@@ -22,19 +22,19 @@ function pintarMenu()
 {
   let btnMenu=document.querySelectorAll("#menu > div > a")
   
-  if(location.href.search(/.*todoelectro.*/ig) != -1)
+  if(btnMenu[1].textContent.search(/.*electrónica.*/ig) != -1)
   btnMenu[1].style.backgroundColor="#ccc"
-  else if(location.href.search(/.*mantenimiento.*/ig) != -1)
+  else if(btnMenu[2].textContent.search(/.*mantenimiento.*/ig) != -1)
   btnMenu[2].style.backgroundColor="#ccc"
-  else if(location.href.search(/.*pcb.*/ig) != -1)
+  else if(btnMenu[3].textContent.search(/.*circuitos\s*impresos.*/ig) != -1)
     btnMenu[3].style.backgroundColor="#ccc"
-  else if(location.href.search(/.*contacto.*/ig) != -1)
+  else if(btnMenu[4].textContent.search(/.*Contactar.*/ig) != -1)
     btnMenu[4].style.backgroundColor="#ccc"
-  else if(location.href.search(/.*portafolio.*/ig) != -1)
+  else if(btnMenu[5].textContent.search(/.*Portafolio.*/ig) != -1)
     btnMenu[5].style.backgroundColor="#ccc"
   else 
   btnMenu[0].style.backgroundColor="#ccc"
-  console.log('se ha ejecutado pintar menu')
+  // console.log('se ha ejecutado pintar menu')
 }
 function cargarBanner()
 {
