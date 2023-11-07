@@ -24,11 +24,8 @@ function pintarMenu(indice)
   
   btnMenu[indice].style.backgroundColor="#ccc"
   for (let i = 0; i < btnMenu.length; i++) {
-    if(i==indice)
-    {
-      btnMenu[i].classList.remove("bg-dark")
-      continue;
-    }
+    btnMenu[i].classList.remove("bg-dark")
+    if(i==indice) continue;
     btnMenu[i].classList += " bg-dark"
   }
   
