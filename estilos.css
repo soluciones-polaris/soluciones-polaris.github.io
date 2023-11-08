@@ -33,3 +33,8 @@
 *{
   box-sizing: border-box;
 }
+body
+{
+  background-size: cover;
+  background-clip: content-box;
+}
