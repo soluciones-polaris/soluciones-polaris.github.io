@@ -5,6 +5,7 @@
   align-items: center;
   padding-top: 4%;
   padding-bottom: 4%;
+  min-height: 100%;
 }
 #myfooter > div
 {
