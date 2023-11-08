@@ -1,143 +1,175 @@
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded", () =>
+{
   cargarBanner()
   cargarMenu()
   cargarMenuH()
   cargarContenido()
   cargarFooter()
+  cargarBolitas()
 
-})
+}
+)
+function cargarBolitas()
+{
+  // Obtén el elemento con la clase "background" al que quieres agregar los elementos <span>
+  let background = document.querySelector('.background');
+
+  // Crea un bucle para crear y agregar los elementos <span> al elemento "background"
+  for (let i = 1; i <= 37; i++)
+  {
+    let span = document.createElement('span');
+    background.appendChild(span);
+  }
+
+}
 function cargarFooter()
 {
-  fetch ("footer.html")
+  fetch("footer.html")
   .then(x => x.text())
   .then(y => document.getElementById("myfooter").innerHTML = y);
 }
-function cargarContenido(archivo="programacion.html")
+function cargarContenido(archivo = "programacion.html")
 {
-  fetch (archivo)
+  fetch(archivo)
   .then(x => x.text())
   .then(y => document.getElementById("contenido").innerHTML = y);
 }
 function pintarMenu(indice)
 {
-  let btnMenu=document.querySelectorAll("#menu > div > a")
-  
-  btnMenu[indice].style.backgroundColor="#ccc"
-  for (let i = 0; i < btnMenu.length; i++) {
-    btnMenu[i].classList.remove("bg-dark")
-    if(i==indice) continue;
-    btnMenu[i].classList += " bg-dark"
-  }
-  
-  // console.log('se ha ejecutado pintar menu')
+  let btnMenu = document.querySelectorAll("#menu > div > a")
+
+    btnMenu[indice].style.backgroundColor = "#ccc"
+    for (let i = 0; i < btnMenu.length; i++)
+    {
+      btnMenu[i].classList.remove("bg-dark")
+      if (i == indice)
+        continue;
+      btnMenu[i].classList += " bg-dark"
+    }
+
+    // console.log('se ha ejecutado pintar menu')
 }
 function cargarBanner()
 {
-  fetch ("banner.html")
+  fetch("banner.html")
   .then(x => x.text())
   .then(y => document.getElementById("banner").innerHTML = y);
 }
 
 function cargarMenuH()
 {
-  fetch ("menu-h.html")
+  fetch("menu-h.html")
   .then(x => x.text())
-  .then(y => {
-    let contenedor=document.getElementById("menu-lista")
-    contenedor.innerHTML = y
-    let direcciones=contenedor.querySelectorAll("div > a")
-        direcciones[1].addEventListener("click", (evento)=>
-        {
-          cargarContenido("todoelectro.html")
-          //console.log(evento)
-        })
-        direcciones[2].addEventListener("click", (evento)=>
-        {
-          cargarContenido("mantenimiento.html")
-          //console.log(evento)
-        })
-        direcciones[3].addEventListener("click", (evento)=>
-        {
-          cargarContenido("pcb.html")
-          //console.log(evento)
-        })
-        direcciones[4].addEventListener("click", (evento)=>
-        {
-          cargarContenido("contacto.html")
-          //console.log(evento)
-        })
-        direcciones[5].addEventListener("click", (evento)=>
-        {
-          cargarContenido("portafolio.html")
-          //console.log(evento)
-        })
-        direcciones[0].addEventListener("click", (evento)=>
-        {
-          cargarContenido("programacion.html")
-          //console.log(evento)
-        })
+  .then(y =>
+  {
+    let contenedor = document.getElementById("menu-lista")
+      contenedor.innerHTML = y
+      let direcciones = contenedor.querySelectorAll("div > a")
+      direcciones[1].addEventListener("click", (evento) =>
+      {
+        cargarContenido("todoelectro.html")
+        //console.log(evento)
+      }
+      )
+      direcciones[2].addEventListener("click", (evento) =>
+      {
+        cargarContenido("mantenimiento.html")
+        //console.log(evento)
+      }
+      )
+      direcciones[3].addEventListener("click", (evento) =>
+      {
+        cargarContenido("pcb.html")
+        //console.log(evento)
+      }
+      )
+      direcciones[4].addEventListener("click", (evento) =>
+      {
+        cargarContenido("contacto.html")
+        //console.log(evento)
+      }
+      )
+      direcciones[5].addEventListener("click", (evento) =>
+      {
+        cargarContenido("portafolio.html")
+        //console.log(evento)
+      }
+      )
+      direcciones[0].addEventListener("click", (evento) =>
+      {
+        cargarContenido("programacion.html")
+        //console.log(evento)
+      }
+      )
 
-    });
+  }
+  );
 }
-
 
 function cargarMenu()
 {
-  fetch ("menu.html")
+  fetch("menu.html")
   .then(x => x.text())
-  .then(y => {
-    let contenedor=document.getElementById("menu")
-    contenedor.innerHTML = y
-    // pintarMenu()
-    let evaluador=0
-    let direcciones=contenedor.querySelectorAll("div > a")
-        direcciones[1].addEventListener("click", (evento)=>
-        {
-          cargarContenido("todoelectro.html")
-          pintarMenu(1)
-          evaluador=1
+  .then(y =>
+  {
+    let contenedor = document.getElementById("menu")
+      contenedor.innerHTML = y
+      // pintarMenu()
+      let evaluador = 0
+      let direcciones = contenedor.querySelectorAll("div > a")
+      direcciones[1].addEventListener("click", (evento) =>
+      {
+        cargarContenido("todoelectro.html")
+        pintarMenu(1)
+        evaluador = 1
           //console.log(evento)
-        })
-        direcciones[2].addEventListener("click", (evento)=>
-        {
-          cargarContenido("mantenimiento.html")
-          pintarMenu(2)
-          evaluador=2
+      }
+      )
+      direcciones[2].addEventListener("click", (evento) =>
+      {
+        cargarContenido("mantenimiento.html")
+        pintarMenu(2)
+        evaluador = 2
           //console.log(evento)
-        })
-        direcciones[3].addEventListener("click", (evento)=>
-        {
-          cargarContenido("pcb.html")
-          pintarMenu(3)
-          evaluador=3
+      }
+      )
+      direcciones[3].addEventListener("click", (evento) =>
+      {
+        cargarContenido("pcb.html")
+        pintarMenu(3)
+        evaluador = 3
           //console.log(evento)
-        })
-        direcciones[4].addEventListener("click", (evento)=>
-        {
-          cargarContenido("contacto.html")
-          pintarMenu(4)
-          evaluador=4
+      }
+      )
+      direcciones[4].addEventListener("click", (evento) =>
+      {
+        cargarContenido("contacto.html")
+        pintarMenu(4)
+        evaluador = 4
           //console.log(evento)
-        })
-        direcciones[5].addEventListener("click", (evento)=>
-        {
-          cargarContenido("portafolio.html")
-          pintarMenu(5)
-          evaluador=5
+      }
+      )
+      direcciones[5].addEventListener("click", (evento) =>
+      {
+        cargarContenido("portafolio.html")
+        pintarMenu(5)
+        evaluador = 5
           //console.log(evento)
-        })
-        direcciones[0].addEventListener("click", (evento)=>
-        {
-          cargarContenido("programacion.html")
-          pintarMenu(0)
-          evaluador=0
+      }
+      )
+      direcciones[0].addEventListener("click", (evento) =>
+      {
+        cargarContenido("programacion.html")
+        pintarMenu(0)
+        evaluador = 0
           //console.log(evento)
-        })
-        if(evaluador==0)
-          pintarMenu(evaluador)
+      }
+      )
+      if (evaluador == 0)
+        pintarMenu(evaluador)
 
-
-    });
+  }
+  );
 }
 
 // function updatemenu() {
@@ -149,12 +181,14 @@ function cargarMenu()
 //   }
 // }
 
-function w3_open() {
+function w3_open()
+{
   document.getElementById("mySidebar").style.display = "block";
   document.getElementById("myOverlay").style.display = "block";
 }
 
-function w3_close() {
+function w3_close()
+{
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
 }
