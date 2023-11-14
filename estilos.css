@@ -4,16 +4,16 @@
   /*flex-wrap: wrap;*/
 
 }
-#contenido > .subContenidoDere
+#contenido.subContenidoDere
 {
   display: flex;
   flex-direction: column;
 }
-#contenido > .subContenidoIz
+#contenido.subContenidoIz
 {
   display: flex;
   flex-direction: column;
-  flex-basis: 70%;
+  flex-basis: 50%;
 }
 .fnd-verde
 {
@@ -24,11 +24,11 @@
   /*font-family: Sofia, serif;*/
   font-weight: bold;
 }
-.ancho100
+/*.ancho100
 {
   width: 100%;
   max-width: 100%;
-}
+}*/
 
 @media (max-width: 1240px) {
   #menu
