@@ -5,23 +5,10 @@ document.addEventListener("DOMContentLoaded", () =>
   cargarMenuH()
   cargarContenido()
   cargarFooter()
-  cargarBolitas()
 
 }
 )
-function cargarBolitas()
-{
-  // Obtén el elemento con la clase "background" al que quieres agregar los elementos <span>
-  let background = document.querySelector('.background');
 
-  // Crea un bucle para crear y agregar los elementos <span> al elemento "background"
-  for (let i = 1; i <= 37; i++)
-  {
-    let span = document.createElement('span');
-    background.appendChild(span);
-  }
-
-}
 function cargarFooter()
 {
   fetch("footer.html")
