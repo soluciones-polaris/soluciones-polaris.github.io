@@ -4,16 +4,16 @@
   /*flex-wrap: wrap;*/
 
 }
-#contenido.subContenidoDere
+#contenido>.subContenidoDere
 {
   display: flex;
   flex-direction: column;
 }
-#contenido.subContenidoIz
+#contenido>.subContenidoIz
 {
   display: flex;
   flex-direction: column;
-  flex-basis: 50%;
+  flex-basis: 70%;
 }
 .fnd-verde
 {
