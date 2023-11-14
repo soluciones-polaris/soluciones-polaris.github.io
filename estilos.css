@@ -1,7 +1,17 @@
 #contenido
 {
   display: flex;
-  
+
+}
+#contenido > .subContenidoDere
+{
+  display: flex;
+  flex-direction: column;
+}
+#contenido > .subContenidoIz
+{
+  display: flex;
+  flex-direction: column;
 }
 .fnd-verde
 {
