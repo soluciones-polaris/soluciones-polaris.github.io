@@ -56,6 +56,5 @@
 body
 {
   /*overflow-y: scroll;*/
-  background: var(--tema-material-500);
-          color: var(--tema-material-500-contrast);
+ 
 }
