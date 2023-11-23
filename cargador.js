@@ -30,9 +30,9 @@ function pintarMenu(indice)
     for (let i = 0; i < btnMenu.length; i++)
     {
       btnMenu[i].classList.remove("bg-dark")
-      btnMenu[i].classList.remove("text-black")
       if (i == indice)
         continue;
+      btnMenu[i].classList.remove("text-black")
       btnMenu[i].classList += " bg-dark"
     }
 
