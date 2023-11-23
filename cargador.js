@@ -26,10 +26,11 @@ function pintarMenu(indice)
   let btnMenu = document.querySelectorAll("#menu > div > a")
 
     btnMenu[indice].style.backgroundColor = "#ccc"
-    btnMenu[indice].style.color = "black"
+    btnMenu[indice].classList += " text-black"
     for (let i = 0; i < btnMenu.length; i++)
     {
       btnMenu[i].classList.remove("bg-dark")
+      btnMenu[i].classList.remove("text-black")
       if (i == indice)
         continue;
       btnMenu[i].classList += " bg-dark"
