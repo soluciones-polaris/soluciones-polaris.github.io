@@ -6,8 +6,19 @@ document.addEventListener("DOMContentLoaded", () =>
   cargarContenido()
   cargarFooter()
 
+  if (haSidoRebasada()) {
+  console.log('La altura del contenido ha sido rebasada.');
+} else {
+  console.log('La altura del contenido no ha sido rebasada.');
+}
+
 }
 )
+
+function haSidoRebasada() {
+  return document.body.scrollHeight > window.innerHeight;
+}
+
 
 function cargarFooter()
 {
