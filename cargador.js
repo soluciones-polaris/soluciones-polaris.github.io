@@ -11,22 +11,22 @@ document.addEventListener("DOMContentLoaded", () =>
 
 window.addEventListener('load', function ()
 {
-  // Tu código aquí se ejecutará cuando la página haya cargado completamente
-  if (haSidoRebasada())
-  {
-    console.log('La altura del contenido ha sido rebasada.');
-    let dispositivo = document.getElementById("dispositivo")
-      dispositivo.style = "text-decoration: none;  display: block; margin: 0px; "
+  // // Tu código aquí se ejecutará cuando la página haya cargado completamente
+  // if (haSidoRebasada())
+  // {
+  //   console.log('La altura del contenido ha sido rebasada.');
+  //   let dispositivo = document.getElementById("dispositivo")
+  //     dispositivo.style = "text-decoration: none;  display: block; margin: 0px; "
 
-  }
-  else
-  {
-    console.log('La altura del contenido no ha sido rebasada.');
-    let dispositivo = document.getElementById("dispositivo")
-      dispositivo.style = "text-decoration: none;  display: block; margin: 0px; position: fixed; bottom: 0px;"
+  // }
+  // else
+  // {
+  //   console.log('La altura del contenido no ha sido rebasada.');
+  //   let dispositivo = document.getElementById("dispositivo")
+  //     dispositivo.style = "text-decoration: none;  display: block; margin: 0px; position: fixed; bottom: 0px;"
 
-  }
-  // console.log('La página se ha cargado completamente.');
+  // }
+  // // console.log('La página se ha cargado completamente.');
 }
 );
 

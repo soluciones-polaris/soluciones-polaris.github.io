@@ -3,6 +3,7 @@
   display: flex;
   /*flex-wrap: wrap;*/
   /*max-height: 100%;*/
+  min-height: 65%;
 
 }
 #contenido>.subContenidoDere
