@@ -1,1 +1,6 @@
-let footer= document.getElementById("footerMain")
+let dispositivo= document.getElementById("dispositivo")
+
+dispositivo.addEventListener('mouseover', function () {
+
+
+  })
