@@ -53,8 +53,11 @@
 *{
   box-sizing: border-box;
 }
-body
+body, html
 {
   /*overflow-y: scroll;*/
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
  
 }
