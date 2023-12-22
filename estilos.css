@@ -7,18 +7,18 @@
 }
 #contenido>.subContenidoDere
 {
-  display: flex;
-  flex-direction: column;
+  /*display: flex;*/
+  /*flex-direction: column;*/
   flex-basis: 30%;
-  text-align: justify;
+  /*text-align: justify;*/
   max-height: 100%;
 }
-#contenido>.subContenidoIz
+#contenido > .subContenidoIz
 {
-  display: flex;
-  flex-direction: column;
+  /*display: flex;*/
+  /*flex-direction: column;*/
   flex-basis: 70%;
-  text-align: justify;
+  /*text-align: justify;*/
   max-height: 100%;
 }
 .fnd-verde
