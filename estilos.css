@@ -6,6 +6,10 @@
   min-height: 65%;
 
 }
+#contenido
+{
+  min-height: 65%;
+}
 #contenidoProgramacion>.subContenidoDere
 {
   /*display: flex;*/
