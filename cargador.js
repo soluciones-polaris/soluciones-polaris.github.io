@@ -183,33 +183,95 @@ function cargarMenu()
       if (evaluador == 0)
         pintarMenu(evaluador)
 
-      let damper=-1;
-      direcciones[0].addEventListener("mouseover", () =>{pintarMenu(0); damper=0})
-      direcciones[0].addEventListener("mouseout", () =>{pintarMenu(0); damper=-1})
-
-      direcciones[1].addEventListener("mouseover", () =>{pintarMenu(1); damper=1})
-      direcciones[1].addEventListener("mouseout", () =>{pintarMenu(1); damper=-1})
-
-      direcciones[2].addEventListener("mouseover", () =>{pintarMenu(2); damper=2})
-      direcciones[2].addEventListener("mouseout", () =>{pintarMenu(2); damper=-1})
-
-      direcciones[3].addEventListener("mouseover", () =>{pintarMenu(3); damper=3})
-      direcciones[3].addEventListener("mouseout", () =>{pintarMenu(3); damper=-1})
-
-      direcciones[4].addEventListener("mouseover", () =>{pintarMenu(4); damper=4})
-      direcciones[4].addEventListener("mouseout", () =>{pintarMenu(4); damper=-1})
-
-      direcciones[5].addEventListener("mouseover", () =>{pintarMenu(5); damper=5})
-      direcciones[5].addEventListener("mouseout", () =>{pintarMenu(5); damper=-1})
-      if(damper==-1)
+        let damper = -1;
+      direcciones[0].addEventListener("mouseover", () =>
       {
-        pintarMenu(evaluador)
-        console.log(evaluador)
-
+        pintarMenu(0);
+        damper = 0
       }
-      else
+      )
+      direcciones[0].addEventListener("mouseout", () =>
       {
-        console.log(evaluador)
+        damper = -1
+      }
+      )
+
+      direcciones[1].addEventListener("mouseover", () =>
+      {
+        pintarMenu(1);
+        damper = 1
+      }
+      )
+      direcciones[1].addEventListener("mouseout", () =>
+      {
+        damper = -1
+      }
+      )
+
+      direcciones[2].addEventListener("mouseover", () =>
+      {
+        pintarMenu(2);
+        damper = 2
+      }
+      )
+      direcciones[2].addEventListener("mouseout", () =>
+      {
+        damper = -1
+      }
+      )
+
+      direcciones[3].addEventListener("mouseover", () =>
+      {
+        pintarMenu(3);
+        damper = 3
+      }
+      )
+      direcciones[3].addEventListener("mouseout", () =>
+      {
+        damper = -1
+      }
+      )
+
+      direcciones[4].addEventListener("mouseover", () =>
+      {
+        pintarMenu(4);
+        damper = 4
+      }
+      )
+      direcciones[4].addEventListener("mouseout", () =>
+      {
+        damper = -1
+      }
+      )
+
+      direcciones[5].addEventListener("mouseover", () =>
+      {
+        pintarMenu(5);
+        damper = 5
+      }
+      )
+      direcciones[5].addEventListener("mouseout", () =>
+      {
+        damper = -1
+      }
+      )
+      for (let i = 0; i < direcciones.length; i++)
+      {
+        direcciones[i].addEventListener("mouseout", () =>
+        {
+          if (damper == -1)
+            {
+              pintarMenu(evaluador)
+              console.log(evaluador)
+
+            }
+          else
+          {
+            console.log(evaluador)
+          }
+
+        }
+        )
       }
 
   }
