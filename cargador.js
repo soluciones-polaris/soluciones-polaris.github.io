@@ -83,36 +83,42 @@ function cargarMenuH()
       direcciones[1].addEventListener("click", (evento) =>
       {
         cargarContenido("todoelectro.html")
+        pintarMenu(1)
         //console.log(evento)
       }
       )
       direcciones[2].addEventListener("click", (evento) =>
       {
         cargarContenido("mantenimiento.html")
+        pintarMenu(2)
         //console.log(evento)
       }
       )
       direcciones[3].addEventListener("click", (evento) =>
       {
         cargarContenido("pcb.html")
+        pintarMenu(3)
         //console.log(evento)
       }
       )
       direcciones[4].addEventListener("click", (evento) =>
       {
         cargarContenido("contacto.html")
+        pintarMenu(4)
         //console.log(evento)
       }
       )
       direcciones[5].addEventListener("click", (evento) =>
       {
         cargarContenido("portafolio.html")
+        pintarMenu(5)
         //console.log(evento)
       }
       )
       direcciones[0].addEventListener("click", (evento) =>
       {
         cargarContenido("programacion.html")
+        pintarMenu(0)
         //console.log(evento)
       }
       )
