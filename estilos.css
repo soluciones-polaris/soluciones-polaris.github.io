@@ -66,6 +66,10 @@
   {
     flex-direction: column;
   }
+  #saltoNombre
+  {
+    padding-top: 2%;
+  }
 }
 
 
