@@ -55,11 +55,12 @@
   }
 }
 
-@media (min-width: 909px) 
+@media (max-width: 909px) 
 {
   #contenido>.subContenidoDere, #contenido > .subContenidoIz
   {
     flex-basis: 100%;
+    width: 100%;
   }
 }
 
