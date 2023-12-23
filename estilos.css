@@ -37,7 +37,7 @@
   max-width: 100%;
 }*/
 
-@media (max-width: 1240px) {
+@media (max-width: 1248px) {
   #menu
   {
     display: none;
@@ -48,10 +48,14 @@
   }
 }
 
-@media (min-width: 1240px) {
+@media (min-width: 1249px) {
   #btnSandh
   {
     display: none;
+  }
+  #menu
+  {
+    display: block;
   }
 }
 
