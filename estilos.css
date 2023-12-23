@@ -57,6 +57,10 @@
   {
     display: block;
   }
+  #mySidebar,  #myOverlay
+  {
+    display: none;
+  }
 }
 
 @media (max-width: 909px) 
