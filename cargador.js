@@ -262,13 +262,13 @@ function cargarMenu()
           if (damper == -1)
             {
               pintarMenu(evaluador)
-              console.log(evaluador)
+              // console.log(damper)
 
             }
-          else
-          {
-            console.log(evaluador)
-          }
+          // else
+          // {
+          //   // console.log(damper)
+          // }
 
         }
         )
