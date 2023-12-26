@@ -1,12 +1,11 @@
 #dispositivo:hover
 {
-  background: hsla(180, 4%, 11%, 0.5);
+  background: hsla(180, 4%, 11%, 0.2);
+  text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);
   /**/
 }
 #dispositivo
 {
-  padding-top: 4%;
-  padding-bottom: 4%;
   min-height: 35%;
   background: hsla(180, 4%, 11%, 1);
 
@@ -18,6 +17,6 @@
 
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1A1C1C", endColorstr="#462150", GradientType=1 );
   /*texto*/
-  text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);
+  
 }
 
