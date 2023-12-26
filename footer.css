@@ -2,6 +2,14 @@
 {
   background: hsla(180, 4%, 11%, 0.2);
   text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);
+  background: linear-gradient(180deg, hsla(180, 4%, 11%, 1) 0%, hsla(287, 42%, 22%, 1) 100%);
+
+  background: -moz-linear-gradient(180deg, hsla(180, 4%, 11%, 1) 0%, hsla(287, 42%, 22%, 1) 100%);
+
+  background: -webkit-linear-gradient(180deg, hsla(180, 4%, 11%, 1) 0%, hsla(287, 42%, 22%, 1) 100%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1A1C1C", endColorstr="#462150", GradientType=1 );
+  /*texto*/
   /**/
 }
 #dispositivo
