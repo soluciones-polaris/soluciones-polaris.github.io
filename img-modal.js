@@ -1,3 +1,4 @@
+cargarBtnCerrar()
 function cargarBtnCerrar()
 {
   let modal = document.getElementById("myModal");
@@ -26,5 +27,6 @@ function imgModal(img)
 
   modal.style.display = "block";
   modalImg.src = img.src;
+  img.width = '95%'
   captionText.innerHTML = img.alt;
 }

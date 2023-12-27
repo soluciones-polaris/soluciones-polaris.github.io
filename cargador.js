@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () =>
   cargarMenu()
   cargarMenuH()
   cargarContenido()
-  cargarBtnCerrar()
+
   // cargarFooter()
 
 }
@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () =>
 
 window.addEventListener('load', function ()
 {
+  cargarBtnCerrar()
   // // Tu código aquí se ejecutará cuando la página haya cargado completamente
   // if (haSidoRebasada())
   // {
