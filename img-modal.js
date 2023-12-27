@@ -26,7 +26,8 @@ function imgModal(img)
   var captionText = document.getElementById("caption");
 
   modal.style.display = "block";
+  img.style = 'width: 95%'
   modalImg.src = img.src;
-  img.width = '95%'
+
   captionText.innerHTML = img.alt;
 }
