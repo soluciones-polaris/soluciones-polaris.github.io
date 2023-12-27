@@ -10,6 +10,8 @@ function cargarBtnCerrar()
     span[i].addEventListener("click",function ()
     {
       modal.style.display = "none";
+      let img = localStorage.getItem("img");
+      img.style = 'width: 100%; cursor: pointer; '
     });
     // console.log('ok '+ i+1 +"\n")
   }
@@ -20,7 +22,7 @@ function cargarBtnCerrar()
 function imgModal(img)
 {
   // Get the modal
-
+  localStorage.setItem("img", img);
   let modal = document.getElementById("myModal");
   // Get the image and insert it inside the modal - use its "alt" text as a caption
   // var img = document.getElementById("myImg");
@@ -28,9 +30,9 @@ function imgModal(img)
   var captionText = document.getElementById("caption");
 
   modal.style.display = "block";
-  img.style = 'width: 95%'
+  img.style = 'width: 95%; cursor: pointer; '
   modalImg.src = img.src;
-  modalImg.style = 'width: 95%'
+  modalImg.style = 'width: 95%; cursor: pointer; '
 
   captionText.innerHTML = img.alt;
 }
