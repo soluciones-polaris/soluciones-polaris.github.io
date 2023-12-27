@@ -102,3 +102,5 @@ body, html
 .no-seleccionable {
     user-select: none;
 }
+
+.img-hover-opacidad:hover {opacity: 0.7;}
