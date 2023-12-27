@@ -1,19 +1,21 @@
-cargarBtnCerrar()
+
 function cargarBtnCerrar()
 {
   let modal = document.getElementById("myModal");
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close");
-  for (var i = 0; i < span.length; i++)
+  console.log("longitud boton close: "+span.length)
+  for (let i = 0; i < span.length; i++)
   {
-    span[i].onclick = function ()
+    span[i].addEventListener("click",function ()
     {
       modal.style.display = "none";
-    }
+    });
+    console.log('ok '+ i+1 +"\n")
   }
   // When the user clicks on <span> (x), close the modal
 }
-
+cargarBtnCerrar()
 
 function imgModal(img)
 {
@@ -28,6 +30,7 @@ function imgModal(img)
   modal.style.display = "block";
   img.style = 'width: 95%'
   modalImg.src = img.src;
+  modalImg.style = 'width: 95%'
 
   captionText.innerHTML = img.alt;
 }
