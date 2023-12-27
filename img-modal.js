@@ -11,11 +11,11 @@ function cargarBtnCerrar()
     {
       modal.style.display = "none";
     });
-    console.log('ok '+ i+1 +"\n")
+    // console.log('ok '+ i+1 +"\n")
   }
   // When the user clicks on <span> (x), close the modal
 }
-cargarBtnCerrar()
+
 
 function imgModal(img)
 {
