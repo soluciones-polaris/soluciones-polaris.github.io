@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () =>
   cargarMenu()
   cargarMenuH()
   cargarContenido()
+  cargarBtnCerrar()
   // cargarFooter()
 
 }
