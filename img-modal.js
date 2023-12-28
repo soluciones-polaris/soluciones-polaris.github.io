@@ -30,7 +30,7 @@ function imgModal(img)
   modal.style.display = "block";
   // img.style = ' cursor: pointer; '
   modalImg.src = img.src;
-  modalImg.style = 'width: 95%; cursor: pointer; max-width: 1000px; '
+  modalImg.style = 'width: 95%; cursor: pointer; max-width: 1200px; '
 
   captionText.innerHTML = img.alt;
 }
