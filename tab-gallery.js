@@ -10,16 +10,18 @@ function myFunction(imgs)
 
 function render_altura()
 {
-  let contenedor = document.getElementById('set_altura');
-  if(contenedor)
+  let contenedor = document.getElementsByClassName('set_altura');
+  if (contenedor)
   {
-    let nuevoAlto = contenedor.clientWidth * 0.20;
-    contenedor.style.height = nuevoAlto + 'px';
+    for (let i = 0; i < contenedor.length; i++)
+    {
+      let nuevoAlto = contenedor[i].clientWidth * 0.20;
+      contenedor[i].style.height = nuevoAlto + 'px';
+    }
   }
   else
   {
-    console.log('contendor no encontrado: '+ 'set_altura')
+    console.log('contendor no encontrado: ' + 'set_altura')
   }
   // console.log('Ejecuntando: ' + nuevoAlto + "px")
 }
-
