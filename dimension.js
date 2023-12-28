@@ -9,7 +9,7 @@ window.addEventListener('load', function ()
     {
       w3_close()
     }
-    // render_altura()
+    render_altura()
     
     // Código que se ejecutará cuando la ventana se redimensione
     // console.log('La ventana se ha redimensionado. Ancho:', anchoVentana, 'Alto:', altoVentana);
