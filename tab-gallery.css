@@ -8,7 +8,7 @@
 }
 
 /* Style the images inside the grid */
-.row_1 > .column_1 > img {
+.column_1 img {
   opacity: 0.8 !important; 
   cursor: pointer !important; 
   max-height: 100% !important;
@@ -16,7 +16,7 @@
   width: 100% !important;
 }
 
-.column_1 > img:hover {
+.column_1 img:hover {
   opacity: 1;
 }
 
@@ -54,7 +54,7 @@
   position: absolute;
   top: 10px;
   right: 15px;
-  color: red;
+  /*color: red;*/
   font-weight: bold;
   font-size: 35px;
   cursor: pointer;
