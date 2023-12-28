@@ -8,7 +8,7 @@ function myFunction(imgs)
     expandImg.parentElement.style.display = "block";
 }
 
- function render_altura()
+function render_altura()
 {
   let contenedor = document.getElementById('set_altura');
   let nuevoAlto = contenedor.clientWidth * 0.20;

@@ -47,7 +47,11 @@ function cargarContenido(archivo = "programacion.html")
 {
   fetch(archivo)
   .then(x => x.text())
-  .then(y => document.getElementById("contenido").innerHTML = y);
+  .then(y => 
+  {
+    document.getElementById("contenido").innerHTML = y
+    render_altura()
+  });
 }
 function pintarMenu(indice)
 {
