@@ -16,6 +16,10 @@
   opacity: 1;
 }
 
+.row_1
+{
+  border: 1px solid aqua;
+}
 /* Clear floats after the columns */
 .row_1:after {
   content: "";
