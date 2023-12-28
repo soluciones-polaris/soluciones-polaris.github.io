@@ -8,3 +8,7 @@ function myFunction(imgs) {
 }
 
 
+function setHeight(element) {
+    var nuevoAlto = element.clientWidth * 0.20;
+    element.style.height = nuevoAlto + 'px';
+  }
