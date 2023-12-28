@@ -29,7 +29,7 @@
 {
   display: flex;
    justify-content: space-around;
-   
+
   /*flex-wrap: wrap;*/
   border: 1px solid aqua;
   /*margin-bottom: 15px;*/
@@ -47,6 +47,7 @@
 .container_1 {
   position: relative;
   display: none;
+  margin-top: 2%;
 }
 
 /* Expanding image text */
