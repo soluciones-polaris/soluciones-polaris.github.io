@@ -50,7 +50,10 @@ function cargarContenido(archivo = "programacion.html")
   .then(y => 
   {
     document.getElementById("contenido").innerHTML = y
-    render_altura()
+    if(archivo == "programacion.html")
+    {
+      render_altura()
+    }
   });
 }
 function pintarMenu(indice)
