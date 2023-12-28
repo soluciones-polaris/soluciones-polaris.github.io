@@ -4,7 +4,7 @@ function cargarBtnCerrar()
   let modal = document.getElementById("myModal");
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close");
-  console.log("longitud boton close: "+span.length)
+  // console.log("longitud boton close: "+span.length)
   for (let i = 0; i < span.length; i++)
   {
     span[i].addEventListener("click",function ()
