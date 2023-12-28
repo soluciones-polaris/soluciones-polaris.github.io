@@ -58,5 +58,6 @@
   /*color: red;*/
   font-weight: bold;
   font-size: 35px;
-  cursor: pointer;
+  /*cursor: pointer;*/
+  z-index: 20;
 }
