@@ -8,11 +8,11 @@ function myFunction(imgs)
     expandImg.parentElement.style.display = "block";
 }
 
-window.addEventListener('load', function ()
+ function render_altura()
 {
   let contenedor = document.getElementById('set_altura');
   let nuevoAlto = contenedor.clientWidth * 0.20;
   contenedor.style.height = nuevoAlto + 'px';
   console.log('Ejecuntando: ' + nuevoAlto + "px")
 }
-);
+
