@@ -13,6 +13,6 @@ function render_altura()
   let contenedor = document.getElementById('set_altura');
   let nuevoAlto = contenedor.clientWidth * 0.20;
   contenedor.style.height = nuevoAlto + 'px';
-  console.log('Ejecuntando: ' + nuevoAlto + "px")
+  // console.log('Ejecuntando: ' + nuevoAlto + "px")
 }
 
