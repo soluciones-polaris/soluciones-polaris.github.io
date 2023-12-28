@@ -8,9 +8,10 @@ function myFunction(imgs)
     expandImg.parentElement.style.display = "block";
 }
 
-function setHeight(element)
-{
-  let nuevoAlto = element.clientWidth * 0.20;
-  element.style = "height: "+nuevoAlto + 'px';
-  console.log('nuevo alto es:'+ nuevoAlto+'px')
-}
+document.addEventListener('DOMContentLoaded', function() {
+    let contenedor = document.getElementById('set_altura');
+    if (contenedor) {
+      let nuevoAlto = contenedor.clientWidth * 0.20;
+      contenedor.style.height = nuevoAlto + 'px';
+    }
+  });
