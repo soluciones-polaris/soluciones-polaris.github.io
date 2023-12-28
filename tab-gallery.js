@@ -16,6 +16,7 @@ function render_altura()
     for (let i = 0; i < contenedor.length; i++)
     {
       let nuevoAlto = contenedor[i].clientWidth * 0.13;
+      if(nuevoAlto>=120) nuevoAlto=120;
       contenedor[i].style.height = nuevoAlto + 'px';
     }
   }

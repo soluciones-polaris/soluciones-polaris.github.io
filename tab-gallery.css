@@ -48,6 +48,7 @@
   position: relative;
   display: none;
   margin-top: 2%;
+  max-width: 1200px;
 }
 
 /* Expanding image text */
