@@ -8,11 +8,11 @@ function myFunction(imgs)
     expandImg.parentElement.style.display = "block";
 }
 
-document.addEventListener('load', function() {
-    let contenedor = document.getElementById('set_altura');
-    if (contenedor) {
-      let nuevoAlto = contenedor.clientWidth * 0.20;
-      contenedor.style.height = nuevoAlto + 'px';
-    }
-    console.log('Ejecuntando: '+ nuevoAlto+"px")
-  });
+document.addEventListener('load', function ()
+{
+  let contenedor = document.getElementById('set_altura');
+  let nuevoAlto = contenedor.clientWidth * 0.20;
+  contenedor.style.height = nuevoAlto + 'px';
+  console.log('Ejecuntando: ' + nuevoAlto + "px")
+}
+);
