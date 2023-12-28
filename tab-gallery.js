@@ -11,8 +11,15 @@ function myFunction(imgs)
 function render_altura()
 {
   let contenedor = document.getElementById('set_altura');
-  let nuevoAlto = contenedor.clientWidth * 0.20;
-  contenedor.style.height = nuevoAlto + 'px';
+  if(contenedor)
+  {
+    let nuevoAlto = contenedor.clientWidth * 0.20;
+    contenedor.style.height = nuevoAlto + 'px';
+  }
+  else
+  {
+    console.log('contendor no encontrado: '+ 'set_altura')
+  }
   // console.log('Ejecuntando: ' + nuevoAlto + "px")
 }
 
