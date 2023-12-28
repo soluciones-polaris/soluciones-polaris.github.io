@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" type="text/css" href="estilos.css">
+  <link rel="stylesheet" type="text/css" href="tab-gallery.css">
   <link rel="stylesheet" type="text/css" href="img-modal.css">
   <link rel="stylesheet" type="text/css" href="footer.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
@@ -33,6 +34,35 @@
     <div id="caption"></div>
   </div>
 
+   <!-- The grid: four columns -->
+    <div class="row">
+      <div class="column">
+        <img src="img_nature.jpg" alt="Nature" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="img_snow.jpg" alt="Snow" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="img_mountains.jpg" alt="Mountains" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="img_lights.jpg" alt="Lights" onclick="myFunction(this);">
+      </div>
+    </div>
+
+    <!-- The expanding image container -->
+    <div class="container">
+      <!-- Close the image -->
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+      <!-- Expanded image -->
+      <img id="expandedImg" style="width:100%">
+
+      <!-- Image text -->
+      <div id="imgtext"></div>
+    </div> 
+
+
   
   <footer class=" w3-center w3-margin-top pt-3" id="dispositivo" >
     <p class="text-white">Búscame en las redes sociales</p>
@@ -53,6 +83,7 @@
   
   
   <script src="cargador.js"></script>
+  <script src="tab-gallery.js"></script>
   <script src="img-modal.js"></script>
   <script src="footer.js"></script>
   <script src="dimension.js"></script>
