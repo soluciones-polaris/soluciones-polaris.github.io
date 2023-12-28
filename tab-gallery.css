@@ -1,22 +1,22 @@
 /* The grid: Four equal columns that floats next to each other */
-.column {
+.column_1 {
   float: left;
   width: 25%;
   padding: 10px;
 }
 
 /* Style the images inside the grid */
-.column img {
+.column_1 img {
   opacity: 0.8; 
   cursor: pointer; 
 }
 
-.column img:hover {
+.column_1 img:hover {
   opacity: 1;
 }
 
 /* Clear floats after the columns */
-.row:after {
+.row_1:after {
   content: "";
   display: table;
   clear: both;
