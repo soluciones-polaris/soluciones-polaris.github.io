@@ -8,6 +8,28 @@ function myFunction(imgs)
     expandImg.parentElement.style.display = "block";
 }
 
+function myFunction1(imgs)
+{
+  let expandImg = document.getElementById("expandedImg1");
+  let imgText = document.getElementById("imgtext1");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  imgText.style = " color: aqua;  text-shadow: 4px 2px 2px rgba(0, 0, 0, 1);"
+    expandImg.parentElement.style.display = "block";
+}
+
+function myFunction2(imgs)
+{
+  let expandImg = document.getElementById("expandedImg2");
+  let imgText = document.getElementById("imgtext2");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  imgText.style = " color: aqua;  text-shadow: 4px 2px 2px rgba(0, 0, 0, 1);"
+    expandImg.parentElement.style.display = "block";
+}
+
+
+
 function render_altura()
 {
   let contenedor = document.getElementsByClassName('set_altura');
