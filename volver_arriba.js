@@ -8,7 +8,7 @@ window.onscroll = function ()
 function toggleScrollToTopButton()
 {
   let button = document.getElementById('btnScrollToTop');
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100)
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500)
   {
     button.style = 'display: block; opacity: 0.7;';
   }
