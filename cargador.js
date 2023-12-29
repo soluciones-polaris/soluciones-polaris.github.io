@@ -90,6 +90,7 @@ function cargarMenuH()
       {
         cargarContenido("todoelectro.html")
         pintarMenu(1)
+        sessionStorage.setItem("evaluador", "1")
         //console.log(evento)
       }
       )
@@ -97,6 +98,7 @@ function cargarMenuH()
       {
         cargarContenido("mantenimiento.html")
         pintarMenu(2)
+        sessionStorage.setItem("evaluador", "2")
         //console.log(evento)
       }
       )
@@ -104,6 +106,7 @@ function cargarMenuH()
       {
         cargarContenido("pcb.html")
         pintarMenu(3)
+        sessionStorage.setItem("evaluador", "3")
         //console.log(evento)
       }
       )
@@ -111,6 +114,7 @@ function cargarMenuH()
       {
         cargarContenido("contacto.html")
         pintarMenu(4)
+        sessionStorage.setItem("evaluador", "4")
         //console.log(evento)
       }
       )
@@ -118,6 +122,7 @@ function cargarMenuH()
       {
         cargarContenido("portafolio.html")
         pintarMenu(5)
+        sessionStorage.setItem("evaluador", "5")
         //console.log(evento)
       }
       )
@@ -125,6 +130,7 @@ function cargarMenuH()
       {
         cargarContenido("programacion.html")
         pintarMenu(0)
+        sessionStorage.setItem("evaluador", "0")
         //console.log(evento)
       }
       )
@@ -143,6 +149,12 @@ function cargarMenu()
       contenedor.innerHTML = y
       // pintarMenu()
       let evaluador = 0
+      if(sessionStorage.getItem("evaluador"))
+      {
+        evaluador= parseInt(sessionStorage.getItem("evaluador"))
+        console.log("evaluador: "+evaluador)
+      }
+
       let direcciones = contenedor.querySelectorAll("div > a")
       direcciones[1].addEventListener("click", (evento) =>
       {

@@ -35,11 +35,11 @@
   /*font-family: Sofia, serif;*/
   font-weight: bold;
 }
-/*.ancho100
+.ancho100
 {
   width: 100%;
   max-width: 100%;
-}*/
+}
 
 @media (max-width: 1248px) {
   #menu
