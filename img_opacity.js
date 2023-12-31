@@ -8,7 +8,7 @@ function load_programacion_html()
     {
       img_seleccionada[i].addEventListener("click", () => {
         inicio=false;
-        this.style="opacity: 1;"
+        img_seleccionada[i].style="opacity: 1;"
       })
       }
   }
