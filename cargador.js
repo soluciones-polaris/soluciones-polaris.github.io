@@ -33,7 +33,12 @@ function cargarContenido(archivo = "programacion.html")
   {
     document.getElementById("contenido").innerHTML = y
       render_altura()
-      load_programacion_html()
+      if(archivo=="programacion.html")
+        load_programacion_html()
+      else if(archivo=="portafolio.html")
+        load_potafolio_html()
+      else if(archivo=="pcb.html")
+        load_pbc_html()
   });
 }
 function pintarMenu(indice)
