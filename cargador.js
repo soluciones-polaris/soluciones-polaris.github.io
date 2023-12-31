@@ -13,29 +13,11 @@ document.addEventListener("DOMContentLoaded", () =>
 window.addEventListener('load', function ()
 {
   cargarBtnCerrar()
-  // // Tu código aquí se ejecutará cuando la página haya cargado completamente
-  // if (haSidoRebasada())
-  // {
-  //   console.log('La altura del contenido ha sido rebasada.');
-  //   let dispositivo = document.getElementById("dispositivo")
-  //     dispositivo.style = "text-decoration: none;  display: block; margin: 0px; "
-
-  // }
-  // else
-  // {
-  //   console.log('La altura del contenido no ha sido rebasada.');
-  //   let dispositivo = document.getElementById("dispositivo")
-  //     dispositivo.style = "text-decoration: none;  display: block; margin: 0px; position: fixed; bottom: 0px;"
-
-  // }
-  // // console.log('La página se ha cargado completamente.');
+  
 }
 );
 
-function haSidoRebasada()
-{
-  return document.body.scrollHeight > window.innerHeight;
-}
+
 
 function cargarFooter()
 {
@@ -51,6 +33,7 @@ function cargarContenido(archivo = "programacion.html")
   {
     document.getElementById("contenido").innerHTML = y
       render_altura()
+      load_programacion_html()
   });
 }
 function pintarMenu(indice)
