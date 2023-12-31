@@ -1,0 +1,11 @@
+.flex40x60
+{
+  display: flex;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 590px) {
+  .flex40x60 {
+    flex-direction: column;
+  }
+}
