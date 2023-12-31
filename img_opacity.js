@@ -8,6 +8,10 @@ function load_programacion_html()
     {
       img_seleccionada[i].addEventListener("click", () => {
         inicio=false;
+        for (let j = 0; j < img_seleccionada.length; j++) {
+          if(j==i) continue;
+          img_seleccionada[j].style="opacity: 0.5;"
+        }
         img_seleccionada[i].style="opacity: 1;"
       })
       }
