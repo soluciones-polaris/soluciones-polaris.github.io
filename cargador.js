@@ -39,6 +39,13 @@ function cargarContenido(archivo = "programacion.html")
         load_potafolio_html()
       else if(archivo=="pcb.html")
         load_pbc_html()
+      else if(archivo=="todoelectro.html")
+      {
+        load_electro_html1()
+        load_electro_html2()
+      }
+
+
   });
 }
 function pintarMenu(indice)
