@@ -65,6 +65,22 @@ function pintarMenu(indice)
 
     // console.log('se ha ejecutado pintar menu')
 }
+function pintarMenuH(indice)
+{
+  let btnMenu = document.querySelectorAll("#menu-lista > div > a")
+
+    btnMenu[indice].style.backgroundColor = "#607d8b"
+
+    for (let i = 0; i < btnMenu.length; i++)
+    {
+      if (i == indice)
+        continue;
+      
+      btnMenu[indice].style.backgroundColor = ""
+    }
+
+    // console.log('se ha ejecutado pintar menu')
+}
 function cargarBanner()
 {
   fetch("banner.html")
@@ -85,6 +101,7 @@ function cargarMenuH()
       {
         cargarContenido("todoelectro.html")
         pintarMenu(1)
+        pintarMenuH(1)
         evaluador=1
         //console.log(evento)
       }
@@ -93,6 +110,7 @@ function cargarMenuH()
       {
         cargarContenido("mantenimiento.html")
         pintarMenu(2)
+        pintarMenuH(2)
         evaluador=2
         //console.log(evento)
       }
@@ -101,6 +119,7 @@ function cargarMenuH()
       {
         cargarContenido("pcb.html")
         pintarMenu(3)
+        pintarMenuH(3)
         evaluador=3
         //console.log(evento)
       }
@@ -109,6 +128,7 @@ function cargarMenuH()
       {
         cargarContenido("contacto.html")
         pintarMenu(4)
+        pintarMenuH(4)
         evaluador=4
         //console.log(evento)
       }
@@ -117,6 +137,7 @@ function cargarMenuH()
       {
         cargarContenido("portafolio.html")
         pintarMenu(5)
+        pintarMenuH(5)
         evaluador=5
         //console.log(evento)
       }
@@ -125,6 +146,7 @@ function cargarMenuH()
       {
         cargarContenido("programacion.html")
         pintarMenu(0)
+        pintarMenuH(0)
         evaluador=0
         //console.log(evento)
       }
