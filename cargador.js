@@ -99,6 +99,28 @@ function cargarMenuH()
     let direcciones = contenedor.querySelectorAll("div > a")
     if(evaluador==0)
       pintarMenuH(evaluador)
+    for (let i = 0; i < direcciones.length; i++) {
+      direcciones[i].addEventListener("mouseover", (evento) =>
+      {
+       for (let a = 0; a < direcciones.length; a++) {
+         direcciones[a].style=null;
+       }
+       direcciones[i].style="background-color: #607d8b;"
+      }
+      )
+    }
+
+    for (let i = 0; i < direcciones.length; i++) {
+      direcciones[i].addEventListener("mouseout", (evento) =>
+      {
+       for (let a = 0; a < direcciones.length; a++) {
+         direcciones[a].style=null;
+       }
+       direcciones[evaluador].style="background-color: #607d8b;"
+      }
+      )
+    }
+
     direcciones[1].addEventListener("click", (evento) =>
     {
       cargarContenido("todoelectro.html")
