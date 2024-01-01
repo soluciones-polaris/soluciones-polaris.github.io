@@ -95,62 +95,64 @@ function cargarMenuH()
   .then(y =>
   {
     let contenedor = document.getElementById("menu-lista")
-      contenedor.innerHTML = y
-      let direcciones = contenedor.querySelectorAll("div > a")
-      direcciones[1].addEventListener("click", (evento) =>
-      {
-        cargarContenido("todoelectro.html")
-        pintarMenu(1)
-        pintarMenuH(1)
-        evaluador=1
-        //console.log(evento)
-      }
-      )
-      direcciones[2].addEventListener("click", (evento) =>
-      {
-        cargarContenido("mantenimiento.html")
-        pintarMenu(2)
-        pintarMenuH(2)
-        evaluador=2
-        //console.log(evento)
-      }
-      )
-      direcciones[3].addEventListener("click", (evento) =>
-      {
-        cargarContenido("pcb.html")
-        pintarMenu(3)
-        pintarMenuH(3)
-        evaluador=3
-        //console.log(evento)
-      }
-      )
-      direcciones[4].addEventListener("click", (evento) =>
-      {
-        cargarContenido("contacto.html")
-        pintarMenu(4)
-        pintarMenuH(4)
-        evaluador=4
-        //console.log(evento)
-      }
-      )
-      direcciones[5].addEventListener("click", (evento) =>
-      {
-        cargarContenido("portafolio.html")
-        pintarMenu(5)
-        pintarMenuH(5)
-        evaluador=5
-        //console.log(evento)
-      }
-      )
-      direcciones[0].addEventListener("click", (evento) =>
-      {
-        cargarContenido("programacion.html")
-        pintarMenu(0)
-        pintarMenuH(0)
-        evaluador=0
-        //console.log(evento)
-      }
-      )
+    contenedor.innerHTML = y
+    let direcciones = contenedor.querySelectorAll("div > a")
+    if(evaluador==0)
+      pintarMenuH(evaluador)
+    direcciones[1].addEventListener("click", (evento) =>
+    {
+      cargarContenido("todoelectro.html")
+      pintarMenu(1)
+      pintarMenuH(1)
+      evaluador=1
+      //console.log(evento)
+    }
+    )
+    direcciones[2].addEventListener("click", (evento) =>
+    {
+      cargarContenido("mantenimiento.html")
+      pintarMenu(2)
+      pintarMenuH(2)
+      evaluador=2
+      //console.log(evento)
+    }
+    )
+    direcciones[3].addEventListener("click", (evento) =>
+    {
+      cargarContenido("pcb.html")
+      pintarMenu(3)
+      pintarMenuH(3)
+      evaluador=3
+      //console.log(evento)
+    }
+    )
+    direcciones[4].addEventListener("click", (evento) =>
+    {
+      cargarContenido("contacto.html")
+      pintarMenu(4)
+      pintarMenuH(4)
+      evaluador=4
+      //console.log(evento)
+    }
+    )
+    direcciones[5].addEventListener("click", (evento) =>
+    {
+      cargarContenido("portafolio.html")
+      pintarMenu(5)
+      pintarMenuH(5)
+      evaluador=5
+      //console.log(evento)
+    }
+    )
+    direcciones[0].addEventListener("click", (evento) =>
+    {
+      cargarContenido("programacion.html")
+      pintarMenu(0)
+      pintarMenuH(0)
+      evaluador=0
+      //console.log(evento)
+    }
+    )
 
   }
   );
@@ -226,7 +228,7 @@ function cargarMenu()
       if (evaluador == 0)
       {
         pintarMenu(evaluador)
-        pintarMenuH(evaluador)
+        // pintarMenuH(evaluador)
       }
 
         let damper = -1;
