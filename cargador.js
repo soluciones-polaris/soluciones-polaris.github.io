@@ -173,6 +173,7 @@ function cargarMenu()
       {
         cargarContenido("todoelectro.html")
         pintarMenu(1)
+        pintarMenuH(1)
         evaluador = 1
           //console.log(evento)
       }
@@ -181,6 +182,7 @@ function cargarMenu()
       {
         cargarContenido("mantenimiento.html")
         pintarMenu(2)
+        pintarMenuH(2)
         evaluador = 2
           //console.log(evento)
       }
@@ -189,6 +191,7 @@ function cargarMenu()
       {
         cargarContenido("pcb.html")
         pintarMenu(3)
+        pintarMenuH(3)
         evaluador = 3
           //console.log(evento)
       }
@@ -197,6 +200,7 @@ function cargarMenu()
       {
         cargarContenido("contacto.html")
         pintarMenu(4)
+        pintarMenuH(4)
         evaluador = 4
           //console.log(evento)
       }
@@ -205,6 +209,7 @@ function cargarMenu()
       {
         cargarContenido("portafolio.html")
         pintarMenu(5)
+        pintarMenuH(5)
         evaluador = 5
           //console.log(evento)
       }
@@ -213,12 +218,16 @@ function cargarMenu()
       {
         cargarContenido("programacion.html")
         pintarMenu(0)
+        pintarMenuH(5)
         evaluador = 0
           //console.log(evento)
       }
       )
       if (evaluador == 0)
+      {
         pintarMenu(evaluador)
+        pintarMenuH(evaluador)
+      }
 
         let damper = -1;
       direcciones[0].addEventListener("mouseover", () =>
