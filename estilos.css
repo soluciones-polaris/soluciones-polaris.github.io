@@ -103,7 +103,7 @@ body, html
     user-select: none;
 }
 
-.img-hover-opacidad:hover {opacity: 0.9;}
+.img-hover-opacidad:hover {opacity: 0.8;}
 
 .shadow-sky, .hover-shadow-sky:hover
 {
