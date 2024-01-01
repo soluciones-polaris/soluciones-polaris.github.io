@@ -254,7 +254,7 @@ function auxiliar(elemento, estado)
   if(estado)
   {
     for (let i = 0; i < enlace.length; i++) {
-      if(enlace[i].style.trim().length > 0)
+      if(enlace[i].getAttribute("style").trim().length > 0)
         indice= i;
       enlace[i].style=""
 
