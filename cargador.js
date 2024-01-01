@@ -76,7 +76,7 @@ function pintarMenuH(indice)
       if (i == indice)
         continue;
       
-      btnMenu[indice].style.backgroundColor = ""
+      btnMenu[i].style.backgroundColor = ""
     }
 
     // console.log('se ha ejecutado pintar menu')
