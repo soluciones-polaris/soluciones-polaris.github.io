@@ -111,6 +111,16 @@ function cargarMenuH()
     }
 
     for (let i = 0; i < direcciones.length; i++) {
+      direcciones[i].addEventListener("click", (evento) =>
+      {
+       let element = document.getElementById("contenido");
+        element.scrollIntoView();
+      }
+      )
+    }
+
+
+    for (let i = 0; i < direcciones.length; i++) {
       direcciones[i].addEventListener("mouseout", (evento) =>
       {
        for (let a = 0; a < direcciones.length; a++) {
@@ -193,6 +203,15 @@ function cargarMenu()
 
 
       let direcciones = contenedor.querySelectorAll("div > a")
+      for (let i = 0; i < direcciones.length; i++) {
+        direcciones[i].addEventListener("click", (evento) =>
+      {
+        let element = document.getElementById("menu");
+        element.scrollIntoView();
+      }
+      )
+        
+      }
       direcciones[1].addEventListener("click", (evento) =>
       {
         cargarContenido("todoelectro.html")
