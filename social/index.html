@@ -9,32 +9,33 @@
     <h1>Autorización de TikTok</h1>
     <p>Haz clic en el siguiente botón para iniciar el proceso de autorización:</p>
     <button id="authButton">Autorizar con TikTok</button>
+    
+    <h2>Código recibido de TikTok:</h2>
+    <textarea id="codeOutput" rows="4" cols="50" readonly></textarea>
 
     <script>
         // URL de la solicitud de autorización
-        const url = "https://www.tiktok.com/v2/auth/authorize/?client_key=sbawhenv27sk8dferw&response_type=code&scope=user.info.basic,video.publish,video.upload&redirect_uri=https://soluciones-polaris.github.io/social/index.html";
+        const url = "https://www.tiktok.com/v2/auth/authorize/?client_key=sbawhenv27sk8ssdferw&response_type=code&scope=user.info.basic,video.publish,video.upload&redirect_uri=https://soluciones-polaris.github.io/social/index.html";
 
-        // Función para hacer la solicitud GET usando fetch
+        // Función para redirigir al usuario a la URL de autorización de TikTok
         function authorizeTikTok() {
-            fetch(url, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
-            .then(response => response.json())  // Procesa la respuesta JSON
-            .then(data => {
-                console.log('Respuesta de TikTok:', data);  // Muestra la respuesta de TikTok en la consola
-                alert('Autorización completada. Revisa la consola.');
-            })
-            .catch(error => {
-                console.error('Error en la solicitud:', error);  // Muestra cualquier error en la consola
-                alert('Ocurrió un error en la autorización.');
-            });
+            window.location.href = url;
         }
 
         // Añade un evento al botón para llamar a la función de autorización
         document.getElementById('authButton').addEventListener('click', authorizeTikTok);
+
+        // Recuperar el código de la URL de redirección
+        function getCodeFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code');
+            if (code) {
+                document.getElementById('codeOutput').value = code;
+            }
+        }
+
+        // Llamar a la función para obtener el código cuando la página se cargue
+        window.onload = getCodeFromURL;
     </script>
 </body>
 </html>
