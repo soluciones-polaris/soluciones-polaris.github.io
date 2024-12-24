@@ -13,29 +13,56 @@
     <h2>Código recibido de TikTok:</h2>
     <textarea id="codeOutput" rows="4" cols="50" readonly></textarea>
 
-    <script>
-        // URL de la solicitud de autorización
-        const url = "https://www.tiktok.com/v2/auth/authorize/?client_key=sbawhenv27sk8dferw&response_type=code&scope=user.info.basic,video.publish,video.upload&redirect_uri=https://soluciones-polaris.github.io/social/index.html";
+    <h2>Respuesta del token:</h2>
+    <textarea id="tokenOutput" rows="6" cols="50" readonly></textarea>
 
-        // Función para redirigir al usuario a la URL de autorización de TikTok
+    <script>
+        const url = "https://www.tiktok.com/v2/auth/authorize/?client_key=sbawhenv27sk8ssdferw&response_type=code&scope=user.info.basic,video.publish,video.upload&redirect_uri=https://soluciones-polaris.github.io/social/index.html";
+
         function authorizeTikTok() {
             window.location.href = url;
         }
 
-        // Añade un evento al botón para llamar a la función de autorización
         document.getElementById('authButton').addEventListener('click', authorizeTikTok);
 
-        // Recuperar el código de la URL de redirección
         function getCodeFromURL() {
             const urlParams = new URLSearchParams(window.location.search);
             const code = urlParams.get('code');
             if (code) {
                 document.getElementById('codeOutput').value = code;
+                obtenerTokenTikTok(code);
             }
         }
 
-        // Llamar a la función para obtener el código cuando la página se cargue
         window.onload = getCodeFromURL;
+
+        async function obtenerTokenTikTok(code) {
+            const url = "https://open.tiktokapis.com/v2/oauth/token/";
+            
+            const payload = {
+                client_key: "sbawhenv27sk8dferw",        // Reemplaza con tu CLIENT_KEY
+                client_secret: "zPPropdAL1eLKWMzXteo4kxIMvb7kRju", // Reemplaza con tu CLIENT_SECRET
+                code: code,                            // Usa el código recibido
+                grant_type: "authorization_code",
+                redirect_uri: "https://soluciones-polaris.github.io/social/index.html"
+            };
+
+            const options = {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: new URLSearchParams(payload)
+            };
+
+            try {
+                const response = await fetch(url, options);
+                const data = await response.json();
+                document.getElementById('tokenOutput').value = JSON.stringify(data, null, 2); // Muestra la respuesta del token en el textarea
+            } catch (error) {
+                console.error("Error al obtener el token:", error);
+            }
+        }
     </script>
 </body>
 </html>
