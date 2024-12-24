@@ -3,21 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenidos</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f0f0f0;
-        }
-        h1 {
-            color: #4CAF50;
-        }
-    </style>
+    <title>Autorización TikTok</title>
 </head>
 <body>
-    <h1>¡Bienvenidos!</h1>
-    <p>Gracias por visitar nuestra página. Esperamos que disfrutes de la experiencia.</p>
+    <h1>Autorización de TikTok</h1>
+    <p>Haz clic en el siguiente botón para iniciar el proceso de autorización:</p>
+    <button id="authButton">Autorizar con TikTok</button>
+
+    <script>
+        // URL de la solicitud de autorización
+        const url = "https://www.tiktok.com/v2/auth/authorize/?client_key=sbawhenv27sk8dferw&response_type=code&scope=user.info.basic,video.publish,video.upload&redirect_uri=https://soluciones-polaris.github.io/social/index.html";
+
+        // Función para hacer la solicitud GET usando fetch
+        function authorizeTikTok() {
+            fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())  // Procesa la respuesta JSON
+            .then(data => {
+                console.log('Respuesta de TikTok:', data);  // Muestra la respuesta de TikTok en la consola
+                alert('Autorización completada. Revisa la consola.');
+            })
+            .catch(error => {
+                console.error('Error en la solicitud:', error);  // Muestra cualquier error en la consola
+                alert('Ocurrió un error en la autorización.');
+            });
+        }
+
+        // Añade un evento al botón para llamar a la función de autorización
+        document.getElementById('authButton').addEventListener('click', authorizeTikTok);
+    </script>
 </body>
 </html>
