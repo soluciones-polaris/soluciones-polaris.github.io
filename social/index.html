@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autorización TikTok</title>
+    <!-- Incluir Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Autorización de TikTok</h1>
-    <p>Haz clic en el siguiente botón para iniciar el proceso de autorización:</p>
-    <button id="authButton">Autorizar con TikTok</button>
-    
-    <h2>Código recibido de TikTok:</h2>
-    <textarea id="codeOutput" rows="4" cols="50" readonly></textarea>
+<body class="bg-light">
+    <div class="container py-5">
+        <h1 class="mb-4 text-center">Autorización de TikTok</h1>
+        <p class="text-center mb-4">Haz clic en el siguiente botón para iniciar el proceso de autorización:</p>
+        <div class="d-flex justify-content-center mb-4">
+            <button id="authButton" class="btn btn-primary btn-lg">Autorizar con TikTok</button>
+        </div>
 
-    <h2>Respuesta del token:</h2>
-    <textarea id="tokenOutput" rows="6" cols="50" readonly></textarea>
+        <h2 class="mb-3">Código recibido de TikTok:</h2>
+        <textarea id="codeOutput" class="form-control" rows="4" readonly></textarea>
+
+    </div>
 
     <script>
         const url = "https://www.tiktok.com/v2/auth/authorize/?client_key=sbawhenv27sk8dferw&response_type=code&scope=user.info.basic,video.publish,video.upload&redirect_uri=https://soluciones-polaris.github.io/social/index.html";
@@ -30,39 +34,13 @@
             const code = urlParams.get('code');
             if (code) {
                 document.getElementById('codeOutput').value = code;
-                obtenerTokenTikTok(code);
             }
         }
 
         window.onload = getCodeFromURL;
-
-        async function obtenerTokenTikTok(code) {
-            const url = "https://open.tiktokapis.com/v2/oauth/token/";
-            
-            const payload = {
-                client_key: "sbawhenv27sk8dferw",        // Reemplaza con tu CLIENT_KEY
-                client_secret: "zPPropdAL1eLKWMzXteo4kxIMvb7kRju", // Reemplaza con tu CLIENT_SECRET
-                code: code,                            // Usa el código recibido
-                grant_type: "authorization_code",
-                redirect_uri: "https://soluciones-polaris.github.io/social/index.html"
-            };
-
-            const options = {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded"
-                },
-                body: new URLSearchParams(payload)
-            };
-
-            try {
-                const response = await fetch(url, options);
-                const data = await response.json();
-                document.getElementById('tokenOutput').value = JSON.stringify(data, null, 2); // Muestra la respuesta del token en el textarea
-            } catch (error) {
-                console.error("Error al obtener el token:", error);
-            }
-        }
     </script>
+
+    <!-- Incluir JS de Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
