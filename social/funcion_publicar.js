@@ -47,7 +47,7 @@ function publicar_imagen()
                 }
             </style>
             <h1>Imagen subida!!</h1>
-            <h2>La siguiente imagen se  genera en 4 horas</h2>
+            <h2>La siguiente imagen se  genera en unos minutos</h2>
         `;
         document.write(contenido);
         fetch('https://script.google.com/macros/s/AKfycbxbHqkepU93mfDNncePX5pA1qUyDOOS6hVaHMGY1erqQ-oGej69DZsmcHn92j_yJNa-qA/exec')
