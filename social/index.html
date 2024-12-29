@@ -26,7 +26,7 @@
             window.location.href = url;
         }
 
-        if(!localStorage.getItems("refresh_token"))
+        if(!localStorage.getItem("refresh_token"))
         {
             permisos.style="display: block;"
         }
@@ -57,7 +57,7 @@
             })
             .then(data => {
                 console.log('Respuesta del servidor:', data);
-                if(!localStorage.getItems("refresh_token"))
+                if(!localStorage.getItem("refresh_token"))
                 {
                     datos=json.parse(data)
                     localStorage.setItem("refresh_token", datos.refresh_token)
