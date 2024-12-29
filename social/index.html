@@ -19,6 +19,17 @@
 
     </div>
 
+    <div class="container text-center mt-4" id="publicador_tik" style="display: none">
+    <div class="card">
+        <img src="https://soluciones-polaris.github.io/estado_tik_tok.jpg" class="card-img-top img-fluid" alt="Imagen 9:16">
+        <div class="card-body">
+            <h5 class="card-title">Publicar imagen en tu historia</h5>
+            <button class="btn btn-primary">Publicar imagen</button>
+        </div>
+    </div>
+    </div>
+
+
     <script>
         const url = "https://www.tiktok.com/v2/auth/authorize/?client_key=sbawhenv27sk8dferw&response_type=code&scope=user.info.basic,video.publish,video.upload&redirect_uri=https://soluciones-polaris.github.io/social/index.html";
 
@@ -29,10 +40,12 @@
         if(!localStorage.getItem("refresh_token"))
         {
             permisos.style="display: block;"
+            publicador_tik.style="display: none"
         }
         else
         {
            permisos.style="display: none;" 
+           publicador_tik.style="display: block"
         }
         document.getElementById('authButton').addEventListener('click', authorizeTikTok);
 
