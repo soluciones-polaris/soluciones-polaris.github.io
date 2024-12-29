@@ -56,6 +56,7 @@
 
 
     if (code) {
+        permisos.style="display: none;" 
 
         // Codifica el parámetro antes de enviarlo
         const encodedCode = encodeURIComponent(code);
@@ -75,12 +76,15 @@
                     datos=JSON.parse(data)
                     localStorage.setItem("refresh_token", datos.refresh_token)
                     permisos.style="display: none;" 
+                    publicador_tik.style="display: block"
+                    location.assign("https://soluciones-polaris.github.io/social/index.html")
                 }
                 
                 // Puedes procesar la respuesta aquí si es necesario
             })
             .catch(error => {
                 console.error('Error en la solicitud:', error);
+                permisos.style="display: block;"
             });
 
     } else {
