@@ -12,9 +12,15 @@ const encodedCode = encodeURIComponent(localStorage.getItem("refresh_token"));
             .then(data => {
                 console.log('Respuesta del servidor:', data);
                 
+                
             })
             .catch(error => {
                 console.error('Error en la solicitud:', error);
                
             });
+}
+
+function generar_imagen()
+{
+
 }
