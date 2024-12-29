@@ -1,0 +1,4 @@
+function publicar_imagen()
+{
+
+}
