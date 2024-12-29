@@ -15,8 +15,7 @@
             <button id="authButton" class="btn btn-primary btn-lg">Autorizar con TikTok</button>
         </div>
 
-        <h2 class="mb-3">Código recibido de TikTok:</h2>
-        <textarea id="codeOutput" class="form-control" rows="4" readonly></textarea>
+       
 
     </div>
 
@@ -35,8 +34,6 @@
     const code = urlParams.get('code');
 
     if (code) {
-        // Muestra el código en el elemento con id 'codeOutput'
-        document.getElementById('codeOutput').value = code;
 
         // Codifica el parámetro antes de enviarlo
         const encodedCode = encodeURIComponent(code);
