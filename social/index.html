@@ -59,7 +59,7 @@
                 console.log('Respuesta del servidor:', data);
                 if(!localStorage.getItem("refresh_token"))
                 {
-                    datos=json.parse(data)
+                    datos=JSON.parse(data)
                     localStorage.setItem("refresh_token", datos.refresh_token)
                 }
                 
